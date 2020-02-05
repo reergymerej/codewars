@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+    <script>
+
+var socket = io('http://localhost')
+socket.on('message-from-server', function (data) {
+  console.log('got data from message-from-server socket', data)
+  const el = document.createElement('div')
+  el.innerText = JSON.stringify(data)
+  document.body.appendChild(el)
+})
+
+    </script>
+    <h1>Extension!</h1>
+    <p>
+      I am playing the part of extension.  I need to be aware of when things
+      happen in the server.
+    </p>
+
+
+    How do I send a message from the server?
+  </body>
+</html>

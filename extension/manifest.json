@@ -1,0 +1,20 @@
+{
+  "name": "Codewars",
+  "version": "1.0",
+  "description": "use your editor for Codewars",
+  "manifest_version": 2,
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.codewars.com/*"
+      ],
+      "js": [
+        "socket.io.js",
+        "content.js"
+      ]
+    }
+  ]
+}
