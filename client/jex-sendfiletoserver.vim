@@ -7,7 +7,7 @@ function JexSend(file)
   let l:url = "http://localhost/notify"
   let l:command = "curl -X POST " . l:url
   let l:command .= " -H 'Cache-Control: no-cache'"
-  let l:command .= " -d @'" . a:file . "'"
+  let l:command .= " --data-binary @'" . a:file . "'"
   exec "silent !" . l:command
 endfunction
 
